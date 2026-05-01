@@ -24,7 +24,7 @@ const DEFAULT_CATEGORIES = [
 async function initDatabase() {
   try {
     await sequelize.authenticate();
-    await sequelize.sync({ alter: true });
+    await sequelize.sync({ force: false });
     // Seed default categories (no userId = global)
     for (const cat of DEFAULT_CATEGORIES) {
       await Category.findOrCreate({ where: { name: cat.name, isDefault: true, userId: null }, defaults: cat });
