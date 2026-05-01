@@ -1,0 +1,12 @@
+# SpendWise – Expense Tracker
+
+node_modules/
+*.db
+*.sqlite
+uploads/
+.env
+dist/
+build/
+.DS_Store
+Thumbs.db
+*.log
